@@ -30,7 +30,7 @@ data <- data.frame(
   date = seq.Date(Sys.Date()-9, Sys.Date(), by = "day"),
   logical = sample(c(T, F), 10, replace = TRUE)
 )
-attr(data$date, "label") <- "C'est la date!"
+attr(data$date, "label") <- "Date: with a custom label"
 
 ui <- fluidPage(
   theme = bslib::bs_theme(5L),
