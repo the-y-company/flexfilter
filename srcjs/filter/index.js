@@ -4,7 +4,10 @@ class Filter {
     this.pathVariable = opts.pathVariable;
     this.ns = opts.ns;
     this.variablesOnly = opts.variablesOnly;
+    this.threshold = opts.searchThreshold;
+
     this.values = {};
+    this.hasSearch = false;
   }
 
   init() {
@@ -20,13 +23,62 @@ class Filter {
   }
 
   #variableInput(data) {
-    const opts = data.map((el) => {
+    let opts = data.map((el) => {
       return `<li><a class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
         el.label || el.name
       }</a></li>`;
     }).join("");
-    $(`#${this.ns}-variables`).html(opts);
+
+    const id = this.#makeId();
+    if (data.length > this.threshold) {
+      this.hasSearch = true;
+      opts =
+        `<li><input id="${id}" placeholder="Search" type="text" class="form-control dropdown-item" />${opts}<li>`;
+    }
+
+    $(`#${this.ns}-variables`).html(
+      opts,
+    );
     this.#bindVariableAdd();
+    this.#handleSearch(id);
+  }
+
+  #handleSearch(id) {
+    if ($(`#${id}`).length == 0) {
+      return;
+    }
+
+    let timeout;
+
+    $(`#${id}`).on("keyup", (e) => {
+      clearTimeout(timeout);
+
+      setTimeout(() => {
+        let query = $(e.target).val().toLowerCase();
+
+        $(`#${this.ns}-variables`).find(".dropdown-item").each((i, el) => {
+          if (i == 0) {
+            return;
+          }
+
+          let value = $(el).data("value");
+
+          if (value.includes(query)) {
+            $(el).show();
+            return;
+          }
+
+          let text = $(el).text();
+
+          if (text.includes(query)) {
+            $(el).show();
+            return;
+          }
+
+          $(el).hide();
+        });
+      }, 250);
+    });
   }
 
   #bindVariableAdd() {
@@ -42,6 +94,11 @@ class Filter {
         .then((data) => {
           this.#insertInput(data);
         });
+
+      if (this.hasSearch) {
+        $(`#${this.ns}-variables`).find(".dropdown-item").val("");
+        $(`#${this.ns}-variables`).find(".dropdown-item").show();
+      }
     });
   }
 

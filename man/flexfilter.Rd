@@ -8,7 +8,7 @@
 \usage{
 flexfilterUI(id, btn_class = "")
 
-flexfilter_server(id, data, variables_only = FALSE)
+flexfilter_server(id, data, variables_only = FALSE, search_threshold = 20L)
 }
 \arguments{
 \item{id}{Module id.}
@@ -19,6 +19,9 @@ flexfilter_server(id, data, variables_only = FALSE)
 
 \item{variables_only}{Set to \code{TRUE} to not display filters and only display
 variable names.}
+
+\item{search_threshold}{if the number of variables available exceed the \code{search_threshold}
+then a search box appears.}
 }
 \description{
 Flex filter component.

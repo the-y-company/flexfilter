@@ -7,6 +7,8 @@
 #' @param variables_only Set to `TRUE` to not display filters and only display
 #' variable names.
 #' @param btn_class Additional classes to pass to the button
+#' @param search_threshold if the number of variables available exceed the `search_threshold`
+#' then a search box appears.
 #' 
 #' @importFrom shiny tagList div NS tags
 #' 
@@ -49,7 +51,7 @@ flexfilterUI <- function(id, btn_class = ""){
 #' @importFrom shiny moduleServer observe reactive
 #' @rdname flexfilter
 #' @export
-flexfilter_server <- function(id, data, variables_only = FALSE){
+flexfilter_server <- function(id, data, variables_only = FALSE, search_threshold = 20L){
   if(missing(id))
     stop("Missing `id`")
 
@@ -84,6 +86,7 @@ flexfilter_server <- function(id, data, variables_only = FALSE){
             pathVariables = path_variables,
             pathVariable = path_variable,
             variablesOnly = variables_only,
+            searchThreshold = search_threshold,
             ns = ns(NULL)
           )
         )

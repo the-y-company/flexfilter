@@ -40,7 +40,9 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
-  values <- flexfilter_server("filter", data)
+  # if the number of variables available exceed the `search_threshold`
+  # then a search box appears 
+  values <- flexfilter_server("filter", data, search_threshold = 0L)
 
   observe({
     print(values())
