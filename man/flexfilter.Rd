@@ -8,12 +8,15 @@
 \usage{
 flexfilterUI(id)
 
-flexfilter_server(id, data)
+flexfilter_server(id, data, variables_only = FALSE)
 }
 \arguments{
 \item{id}{Module id.}
 
 \item{data}{Dataset.}
+
+\item{variables_only}{Set to \code{TRUE} to not display filters and only display
+variable names.}
 }
 \description{
 Flex filter component.

@@ -18,7 +18,7 @@ remotes::install_github("devOpifex/flexfilter")
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
+```r
 library(shiny)
 library(flexfilter)
 
@@ -30,7 +30,8 @@ data <- data.frame(
   date = seq.Date(Sys.Date()-9, Sys.Date(), by = "day"),
   logical = sample(c(T, F), 10, replace = TRUE)
 )
-attr(data$date, "label") <- "Date: with a custom label"
+attr(data$date, "label") <- "The Date label"
+attr(data$date, "description") <- "This describes the date"
 
 ui <- fluidPage(
   theme = bslib::bs_theme(5L),
@@ -51,6 +52,50 @@ server <- function(input, output, session) {
 
     data |>
       dplyr::filter(!!!values()$exprs) |>
+      DT::datatable()
+  })
+}
+
+shinyApp(ui, server)
+```
+
+### Variables only
+
+```r
+library(shiny)
+library(flexfilter)
+
+data <- data.frame(
+  text = letters[1:10],
+  factors = as.factor(LETTERS[1:10]),
+  numeric = runif(10),
+  integer = 1:10,
+  date = seq.Date(Sys.Date()-9, Sys.Date(), by = "day"),
+  logical = sample(c(T, F), 10, replace = TRUE)
+)
+attr(data$date, "label") <- "The Date label"
+attr(data$date, "description") <- "This describes the date"
+
+ui <- fluidPage(
+  theme = bslib::bs_theme(5L),
+  flexfilterUI("filter"),
+  DT::DTOutput("table")
+)
+
+server <- function(input, output, session) {
+  # only return variable names
+  values <- flexfilter_server("filter", data, variables_only = TRUE)
+
+  observe({
+    print(values())
+  })
+
+  output$table <- DT::renderDT({
+    if(!length(values()))
+      return(data)
+
+    data |>
+      dplyr::select(values()) |>
       DT::datatable()
   })
 }

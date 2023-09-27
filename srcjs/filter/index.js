@@ -3,7 +3,7 @@ class Filter {
     this.pathVariables = opts.pathVariables;
     this.pathVariable = opts.pathVariable;
     this.ns = opts.ns;
-
+    this.variablesOnly = opts.variablesOnly;
     this.values = {};
   }
 
@@ -77,7 +77,7 @@ class Filter {
             <a class="float-right filter-remove"><i class="fa fa-trash text-danger"></i></a>
           </div>
         </div>
-        ${content}
+        ${this.variablesOnly ? "" : content}
       </div>
     </div>`;
     $(`#${this.ns}-filters`).append(card);
@@ -123,6 +123,11 @@ class Filter {
 
     this.values[data.name] = [data.min, data.max];
     this.#send();
+
+    if (this.variablesOnly) {
+      return;
+    }
+
     let timeout;
     $(`#${id}`).on("change", (event) => {
       this.values[data.name] = $(event.target).val().split(";").map((el) =>
@@ -143,6 +148,10 @@ class Filter {
     this.values[data.name] = "";
     this.#send();
 
+    if (this.variablesOnly) {
+      return;
+    }
+
     let timeout;
     $(`#${id}`).on("keyup", (event) => {
       this.values[data.name] = $(event.target).val();
@@ -161,6 +170,13 @@ class Filter {
     const id = this.#makeId();
     const input = `<select id="${id}" class="filter-input">${opts}</select>`;
     this.#appendFilter(data, input);
+
+    if (this.variablesOnly) {
+      this.values[data.name] = "";
+      this.#send();
+      return;
+    }
+
     $(`#${id}`).selectize({
       maxItems: 9999,
     });
@@ -183,6 +199,10 @@ class Filter {
     this.#appendFilter(data, input);
     this.values[data.name] = [data.min, data.max];
     this.#send();
+
+    if (this.variablesOnly) {
+      return;
+    }
 
     $(`.${id}-date`).on("change", (event) => {
       let values = [];
@@ -213,6 +233,11 @@ class Filter {
     this.#appendFilter(data, input);
     this.values[data.name] = [true, false];
     this.#send();
+
+    if (this.variablesOnly) {
+      return;
+    }
+
     $(`.${id}-logical`).on("change", (event) => {
       let values = [];
       $(event.target).closest(".logical-filter").find("input").each((i, el) => {

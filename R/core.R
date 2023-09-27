@@ -4,6 +4,8 @@
 #' 
 #' @param id Module id.
 #' @param data Dataset.
+#' @param variables_only Set to `TRUE` to not display filters and only display
+#' variable names.
 #' 
 #' @importFrom shiny tagList div NS tags
 #' 
@@ -46,7 +48,7 @@ flexfilterUI <- function(id){
 #' @importFrom shiny moduleServer observe reactive
 #' @rdname flexfilter
 #' @export
-flexfilter_server <- function(id, data){
+flexfilter_server <- function(id, data, variables_only = FALSE){
   if(missing(id))
     stop("Missing `id`")
 
@@ -80,12 +82,17 @@ flexfilter_server <- function(id, data){
           list(
             pathVariables = path_variables,
             pathVariable = path_variable,
+            variablesOnly = variables_only,
             ns = ns(NULL)
           )
         )
       })
 
       reactive({
+        if(variables_only){
+          return(names(input$values))
+        }
+
         list(
           values = input$values,
           exprs = make_exprs(data, input$values)
