@@ -12,7 +12,7 @@ get_expression <- function(x, col, value){
 #' @method get_expression default
 #' @export
 get_expression.default <- function(x, col, value){
-  sprintf("%s == %s", col, value)
+  sprintf("%s == '%s'", col, value)
 }
 
 #' @method get_expression factor
