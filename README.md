@@ -61,6 +61,8 @@ shinyApp(ui, server)
 
 ### Variables only
 
+Set `variables_only` to `TRUE` and only variables are displayed (no filter inputs).
+
 ```r
 library(shiny)
 library(flexfilter)
