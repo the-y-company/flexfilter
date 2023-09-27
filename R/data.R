@@ -3,6 +3,7 @@ get_variables <- function(data){
     list(
       class = class(data[[i]]),
       label = attr(data[[i]], "label"),
+      description = attr(data[[i]], "description"),
       name = names(data)[i]
     )
   }) |> 
@@ -18,7 +19,8 @@ get_data <- function(x){
 get_data.default <- function(x){
   list(
     type = "character",
-    label = attr(x, "label")
+    label = attr(x, "label"),
+    description = attr(x, "description")
   )
 }
 
@@ -30,7 +32,8 @@ get_data.numeric <- function(x){
     max = max(x),
     step = get_step(x),
     type = "numeric",
-    label = attr(x, "label")
+    label = attr(x, "label"),
+    description = attr(x, "description")
   )
 }
 
@@ -41,7 +44,8 @@ get_data.Date <- function(x){
     min = min(x),
     max = max(x),
     type = "date",
-    label = attr(x, "label")
+    label = attr(x, "label"),
+    description = attr(x, "description")
   )
 }
 
@@ -52,7 +56,8 @@ get_data.POSIXct <- function(x){
     min = min(x),
     max = max(x),
     type = "datetime",
-    label = attr(x, "label")
+    label = attr(x, "label"),
+    description = attr(x, "description")
   )
 }
 
@@ -62,7 +67,8 @@ get_data.factor <- function(x){
   list(
     values = x |> unique() |> unname(),
     type = "factor",
-    label = attr(x, "label")
+    label = attr(x, "label"),
+    description = attr(x, "description")
   )
 }
 
@@ -72,7 +78,8 @@ get_data.character <- function(x){
   list(
     values = x |> unique() |> unname(),
     type = "factor",
-    label = attr(x, "label")
+    label = attr(x, "label"),
+    description = attr(x, "description")
   )
 }
 
@@ -82,7 +89,8 @@ get_data.logical <- function(x){
   list(
     values = c(TRUE, FALSE),
     type = "logical",
-    label = attr(x, "label")
+    label = attr(x, "label"),
+    description = attr(x, "description")
   )
 }
 

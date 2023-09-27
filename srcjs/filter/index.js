@@ -69,7 +69,10 @@ class Filter {
     const card = `<div id=${id} data-name="${data.name}" class="card mb-1">
       <div class="card-body">
         <div class="d-flex">
-          <div class="flex-grow-1">${data.label || data.name}</div>
+          <div class="flex-grow-1">
+            ${data.label || data.name}
+            <p class="text-muted p-0 m-0">${data.description || ""}</p>
+          </div>
           <div class="flex-shrink-1">
             <a class="float-right filter-remove"><i class="fa fa-trash text-danger"></i></a>
           </div>
