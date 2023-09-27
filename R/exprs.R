@@ -22,6 +22,13 @@ get_expression.factor <- function(x, col, value){
   sprintf("%s %%in%% c(%s)", col, values)
 }
 
+#' @method get_expression character
+#' @export
+get_expression.character <- function(x, col, value){
+  values <- paste0("'", value, "'", collapse = ",")
+  sprintf("%s %%in%% c(%s)", col, values)
+}
+
 #' @method get_expression logical
 #' @export
 get_expression.logical <- function(x, col, value){

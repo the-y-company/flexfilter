@@ -2,11 +2,13 @@
 
 S3method(get_data,Date)
 S3method(get_data,POSIXct)
+S3method(get_data,character)
 S3method(get_data,default)
 S3method(get_data,factor)
 S3method(get_data,logical)
 S3method(get_data,numeric)
 S3method(get_expression,Date)
+S3method(get_expression,character)
 S3method(get_expression,default)
 S3method(get_expression,factor)
 S3method(get_expression,logical)

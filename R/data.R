@@ -66,6 +66,16 @@ get_data.factor <- function(x){
   )
 }
 
+#' @method get_data character
+#' @export
+get_data.character <- function(x){
+  list(
+    values = x |> unique() |> unname(),
+    type = "factor",
+    label = attr(x, "label")
+  )
+}
+
 #' @method get_data logical
 #' @export
 get_data.logical <- function(x){
