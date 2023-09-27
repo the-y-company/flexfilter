@@ -6,12 +6,14 @@
 \alias{flexfilter_server}
 \title{Flex filter}
 \usage{
-flexfilterUI(id)
+flexfilterUI(id, btn_class = "")
 
 flexfilter_server(id, data, variables_only = FALSE)
 }
 \arguments{
 \item{id}{Module id.}
+
+\item{btn_class}{Additional classes to pass to the button}
 
 \item{data}{Dataset.}
 

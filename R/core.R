@@ -6,13 +6,14 @@
 #' @param data Dataset.
 #' @param variables_only Set to `TRUE` to not display filters and only display
 #' variable names.
+#' @param btn_class Additional classes to pass to the button
 #' 
 #' @importFrom shiny tagList div NS tags
 #' 
 #' @name flexfilter
 #' 
 #' @export
-flexfilterUI <- function(id){
+flexfilterUI <- function(id, btn_class = ""){
   ns <- NS(id)
 
 	tagList(
@@ -25,7 +26,7 @@ flexfilterUI <- function(id){
         id = ns("add"),
         class = "input-group",
         tags$button(
-          class = "btn btn-outline-secondary dropdown-toggle w-100",
+          class = sprintf("btn btn-outline-secondary dropdown-toggle w-100 %s", btn_class),
           type = "button",
           `data-bs-toggle` = "dropdown",
           `aria-expanded` = "false",
