@@ -4,6 +4,7 @@ get_variables <- function(data){
       class = class(data[[i]]),
       label = attr(data[[i]], "label"),
       description = attr(data[[i]], "description"),
+      group = attr(data[[i]], "group"),
       name = names(data)[i]
     )
   }) |> 
@@ -20,7 +21,8 @@ get_data.default <- function(x){
   list(
     type = "character",
     label = attr(x, "label"),
-    description = attr(x, "description")
+    description = attr(x, "description"),
+    group = attr(x, "group")
   )
 }
 
@@ -33,7 +35,8 @@ get_data.numeric <- function(x){
     step = get_step(x),
     type = "numeric",
     label = attr(x, "label"),
-    description = attr(x, "description")
+    description = attr(x, "description"),
+    group = attr(x, "group")
   )
 }
 
@@ -45,7 +48,8 @@ get_data.Date <- function(x){
     max = max(x),
     type = "date",
     label = attr(x, "label"),
-    description = attr(x, "description")
+    description = attr(x, "description"),
+    group = attr(x, "group")
   )
 }
 
@@ -57,7 +61,8 @@ get_data.POSIXct <- function(x){
     max = max(x),
     type = "datetime",
     label = attr(x, "label"),
-    description = attr(x, "description")
+    description = attr(x, "description"),
+    group = attr(x, "group")
   )
 }
 
@@ -68,7 +73,8 @@ get_data.factor <- function(x){
     values = x |> unique() |> unname(),
     type = "factor",
     label = attr(x, "label"),
-    description = attr(x, "description")
+    description = attr(x, "description"),
+    group = attr(x, "group")
   )
 }
 
@@ -79,7 +85,8 @@ get_data.character <- function(x){
     values = x |> unique() |> unname(),
     type = "factor",
     label = attr(x, "label"),
-    description = attr(x, "description")
+    description = attr(x, "description"),
+    group = attr(x, "group")
   )
 }
 
@@ -90,7 +97,8 @@ get_data.logical <- function(x){
     values = c(TRUE, FALSE),
     type = "logical",
     label = attr(x, "label"),
-    description = attr(x, "description")
+    description = attr(x, "description"),
+    group = attr(x, "group")
   )
 }
 

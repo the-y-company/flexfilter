@@ -14,7 +14,15 @@ class Filter {
     fetch(this.pathVariables)
       .then((res) => res.json())
       .then((data) => {
-        this.#variableInput(data);
+        let groups = data.map((el) => el.group);
+        groups = [...new Set(groups)];
+
+        if (!groups.length) {
+          this.#variableInput(data);
+          return;
+        }
+
+        this.#variableInputGroup(data, groups);
       });
   }
 
@@ -22,9 +30,38 @@ class Filter {
     return "_" + Math.ceil(Math.random() * 10000000);
   }
 
+  #variableInputGroup(data, groups) {
+    let opts = groups.map((group) => {
+      const items = data.filter((el) => el.group == group);
+
+      let groupItem = `<li><strong class="p-2 fw-bold">${group}</strong></li>`;
+
+      let groupOpts = items.map((el) => {
+        return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
+          el.label || el.name
+        }</a></li>`;
+      }).join("");
+
+      return groupItem + groupOpts;
+    }).join("");
+
+    const id = this.#makeId();
+    if (data.length > this.threshold) {
+      this.hasSearch = true;
+      opts =
+        `<li><input id="${id}" placeholder="Search" type="text" class="form-control dropdown-item" />${opts}<li>`;
+    }
+
+    $(`#${this.ns}-variables`).html(
+      opts,
+    );
+    this.#bindVariableAdd();
+    this.#handleSearch(id);
+  }
+
   #variableInput(data) {
     let opts = data.map((el) => {
-      return `<li><a class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
+      return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
         el.label || el.name
       }</a></li>`;
     }).join("");
@@ -61,7 +98,7 @@ class Filter {
             return;
           }
 
-          let value = $(el).data("value");
+          let value = $(el).data("value").toLowerCase();
 
           if (value.includes(query)) {
             $(el).show();

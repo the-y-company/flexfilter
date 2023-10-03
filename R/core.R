@@ -94,7 +94,12 @@ flexfilter_server <- function(id, data, variables_only = FALSE, search_threshold
 
       reactive({
         if(variables_only){
-          return(names(input$values))
+          nms <- names(input$values)
+
+          if(is.null(nms))
+            nms <- list()
+
+          return(nms)
         }
 
         list(
