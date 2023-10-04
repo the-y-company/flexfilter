@@ -49,7 +49,7 @@ class Filter {
     if (data.length > this.threshold) {
       this.hasSearch = true;
       opts =
-        `<li><input id="${id}" placeholder="Search" type="text" class="form-control dropdown-item" />${opts}<li>`;
+        `<li><input id="${id}" placeholder="Search" type="text" class="form-control p-2" />${opts}<li>`;
     }
 
     $(`#${this.ns}-variables`).html(
