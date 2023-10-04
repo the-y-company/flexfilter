@@ -168,7 +168,7 @@ class Filter {
             <p class="text-muted p-0 m-0">${data.description || ""}</p>
           </div>
           <div class="flex-shrink-1">
-            <a class="float-right filter-remove"><i class="fa fa-trash text-danger"></i></a>
+            <a class="float-right filter-remove"><i class="fa fa-trash text-warning"></i></a>
           </div>
         </div>
         ${this.variablesOnly ? "" : content}
@@ -258,6 +258,14 @@ class Filter {
 
   #insertFactor(data) {
     const opts = data.values.map((el) => {
+      if (el == "null") {
+        return "";
+      }
+
+      if (el == null) {
+        return;
+      }
+
       return `<option value="${el}">${el}</option>`;
     }).join("");
 
@@ -275,10 +283,13 @@ class Filter {
       maxItems: 9999,
     });
     $(`#${id}`)[0].selectize.setValue(null);
-    this.values[data.name] = "";
-    this.#send();
     $(`#${id}`).on("change", (event) => {
-      this.values[data.name] = $(event.target).val();
+      let val = $(event.target).val();
+      if (val.length == 0) {
+        delete this.values[data.name];
+        this.#send();
+      }
+      this.values[data.name] = val;
       this.#send();
     });
   }

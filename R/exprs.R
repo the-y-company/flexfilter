@@ -1,8 +1,13 @@
 make_exprs <- function(data, values) {
   lapply(seq_along(values), \(i) {
-    get_expression(data[[names(values)[i]]], names(values)[i], unlist(values[i])) |>
-      rlang::parse_expr()
-  })
+    expr <- get_expression(data[[names(values)[i]]], names(values)[i], unlist(values[i]))
+
+    if(is.null(expr))
+      return("")
+    
+    rlang::parse_expr(expr)
+  }) |>
+    purrr::keep(\(x){x != ""})
 }
 
 get_expression <- function(x, col, value){
@@ -18,6 +23,8 @@ get_expression.default <- function(x, col, value){
 #' @method get_expression factor
 #' @export
 get_expression.factor <- function(x, col, value){
+  if(is.null(value))
+    return(NULL)
   values <- paste0("'", value, "'", collapse = ",")
   sprintf("%s %%in%% c(%s)", col, values)
 }

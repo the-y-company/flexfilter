@@ -26,7 +26,7 @@ flexfilterUI <- function(id, btn_class = ""){
       ),
       div(
         id = ns("add"),
-        class = "input-group",
+        class = "input-group mt-2",
         tags$button(
           class = sprintf("btn btn-outline-secondary dropdown-toggle w-100 %s", btn_class),
           type = "button",
