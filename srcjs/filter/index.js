@@ -258,7 +258,7 @@ class Filter {
 
   #insertFactor(data) {
     const opts = data.values.map((el) => {
-      return `<option value=${el}>${el}</option>`;
+      return `<option value="${el}">${el}</option>`;
     }).join("");
 
     const id = this.#makeId();
