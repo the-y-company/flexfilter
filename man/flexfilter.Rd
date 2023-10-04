@@ -6,7 +6,7 @@
 \alias{flexfilter_server}
 \title{Flex filter}
 \usage{
-flexfilterUI(id, btn_class = "")
+flexfilterUI(id, btn_class = "mt-2")
 
 flexfilter_server(id, data, variables_only = FALSE, search_threshold = 20L)
 }

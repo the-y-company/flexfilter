@@ -15,7 +15,7 @@
 #' @name flexfilter
 #' 
 #' @export
-flexfilterUI <- function(id, btn_class = ""){
+flexfilterUI <- function(id, btn_class = "mt-2"){
   ns <- NS(id)
 
 	tagList(
@@ -26,7 +26,7 @@ flexfilterUI <- function(id, btn_class = ""){
       ),
       div(
         id = ns("add"),
-        class = "input-group mt-2",
+        class = "input-group",
         tags$button(
           class = sprintf("btn btn-outline-secondary dropdown-toggle w-100 %s", btn_class),
           type = "button",
