@@ -5,6 +5,7 @@ class Filter {
     this.ns = opts.ns;
     this.variablesOnly = opts.variablesOnly;
     this.threshold = opts.searchThreshold;
+    this.groups = false;
 
     this.values = {};
     this.hasSearch = false;
@@ -22,6 +23,7 @@ class Filter {
           return;
         }
 
+        this.groups = true;
         this.#variableInputGroup(data, groups);
       });
   }
@@ -30,11 +32,37 @@ class Filter {
     return "_" + Math.ceil(Math.random() * 10000000);
   }
 
+  #bindRemove(data, id) {
+    $(`#${id} .filter-remove`).on("click", (event) => {
+      $(event.target).closest(".card").remove();
+
+      if (!this.groups) {
+        $(`#${this.ns}-variables`).append(
+          `<li><a class="dropdown-item ${this.ns}-var" data-value="${data.name}">${
+            data.label || data.name
+          }</a></li>`,
+        );
+      } else {
+        $(
+          `<li><a class="dropdown-item ${this.ns}-var" data-value="${data.name}">${
+            data.label || data.name
+          }</a></li>`,
+        ).insertAfter(
+          $(`#${this.ns}-variables`).find(`[data-group="${data.group}"]`),
+        );
+      }
+      this.#bindVariableAdd();
+      delete this.values[data.name];
+      this.#send();
+    });
+  }
+
   #variableInputGroup(data, groups) {
     let opts = groups.map((group) => {
       const items = data.filter((el) => el.group == group);
 
-      let groupItem = `<li><strong class="p-2 fw-bold">${group}</strong></li>`;
+      let groupItem =
+        `<li><strong data-group="${group}" class="p-2 fw-bold">${group}</strong></li>`;
 
       let groupOpts = items.map((el) => {
         return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
@@ -176,21 +204,6 @@ class Filter {
     </div>`;
     $(`#${this.ns}-filters`).append(card);
     this.#bindRemove(data, id);
-  }
-
-  #bindRemove(data, id) {
-    $(`#${id} .filter-remove`).on("click", (event) => {
-      $(event.target).closest(".card").remove();
-
-      $(`#${this.ns}-variables`).append(
-        `<li><a class="dropdown-item ${this.ns}-var" data-value="${data.name}">${
-          data.label || data.name
-        }</a></li>`,
-      );
-      this.#bindVariableAdd();
-      delete this.values[data.name];
-      this.#send();
-    });
   }
 
   #send() {
