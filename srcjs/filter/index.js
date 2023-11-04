@@ -62,7 +62,7 @@ class Filter {
       const items = data.filter((el) => el.group == group);
 
       let groupItem =
-        `<li><strong data-group="${group}" class="p-2 fw-bold">${group}</strong></li>`;
+        `<li class="p-3"><strong data-group="${group}" class="fw-bold">${group}</strong></li>`;
 
       let groupOpts = items.map((el) => {
         return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
