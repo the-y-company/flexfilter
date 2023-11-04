@@ -70,7 +70,7 @@ class Filter {
           .map((el) => {
             return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${
               this.ns
-            }-var" data-value="${el.name}">${el.label || el.name}</a></li>`;
+            }-var" data-grp="${el.group}" data-value="${el.name}">${el.label || el.name}</a></li>`;
           })
           .join("");
 
@@ -131,14 +131,22 @@ class Filter {
             }
 
             let value = $(el).find("strong").data("group");
+            let type = "group";
 
-            if (!value) value = $(el).find("a").data("value");
+            if (!value) {
+              type = "item";
+              value = $(el).find("a").data("value");
+            }
 
             if (!value) return;
 
             value = value.toLowerCase();
 
             if (value.includes(query)) {
+              if (type == "item") {
+                let group = $(el).find("a").data("grp");
+                $(`[data-group='${group}']`).parent().show();
+              }
               $(el).show();
               return;
             }
