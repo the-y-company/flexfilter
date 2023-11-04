@@ -38,17 +38,19 @@ class Filter {
 
       if (!this.groups) {
         $(`#${this.ns}-variables`).append(
-          `<li><a class="dropdown-item ${this.ns}-var" data-value="${data.name}">${
-            data.label || data.name
-          }</a></li>`,
+          `<li><a class="dropdown-item ${this.ns}-var" data-value="${
+            data.name
+          }">${data.label || data.name}</a></li>`,
         );
       } else {
         $(
-          `<li><a class="dropdown-item ${this.ns}-var" data-value="${data.name}">${
-            data.label || data.name
-          }</a></li>`,
+          `<li><a class="dropdown-item ${this.ns}-var" data-value="${
+            data.name
+          }">${data.label || data.name}</a></li>`,
         ).insertAfter(
-          $(`#${this.ns}-variables`).find(`[data-group="${data.group}"]`),
+          $(`#${this.ns}-variables`)
+            .find(`[data-group="${data.group}"]`)
+            .parent(),
         );
       }
       this.#bindVariableAdd();
@@ -58,52 +60,51 @@ class Filter {
   }
 
   #variableInputGroup(data, groups) {
-    let opts = groups.map((group) => {
-      const items = data.filter((el) => el.group == group);
+    let opts = groups
+      .map((group) => {
+        const items = data.filter((el) => el.group == group);
 
-      let groupItem =
-        `<li class="p-3"><strong data-group="${group}" class="fw-bold">${group}</strong></li>`;
+        let groupItem = `<li class="p-2"><strong data-group="${group}" class="fw-bold">${group}</strong></li>`;
 
-      let groupOpts = items.map((el) => {
-        return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
-          el.label || el.name
-        }</a></li>`;
-      }).join("");
+        let groupOpts = items
+          .map((el) => {
+            return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${
+              this.ns
+            }-var" data-value="${el.name}">${el.label || el.name}</a></li>`;
+          })
+          .join("");
 
-      return groupItem + groupOpts;
-    }).join("");
+        return groupItem + groupOpts;
+      })
+      .join("");
 
     const id = this.#makeId();
     if (data.length > this.threshold) {
       this.hasSearch = true;
-      opts =
-        `<li><input id="${id}" placeholder="Search" type="text" class="form-control p-2" />${opts}<li>`;
+      opts = `<li><input id="${id}" placeholder="Search" type="text" class="form-control p-2" />${opts}<li>`;
     }
 
-    $(`#${this.ns}-variables`).html(
-      opts,
-    );
+    $(`#${this.ns}-variables`).html(opts);
     this.#bindVariableAdd();
     this.#handleSearch(id);
   }
 
   #variableInput(data) {
-    let opts = data.map((el) => {
-      return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${this.ns}-var" data-value="${el.name}">${
-        el.label || el.name
-      }</a></li>`;
-    }).join("");
+    let opts = data
+      .map((el) => {
+        return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${
+          this.ns
+        }-var" data-value="${el.name}">${el.label || el.name}</a></li>`;
+      })
+      .join("");
 
     const id = this.#makeId();
     if (data.length > this.threshold) {
       this.hasSearch = true;
-      opts =
-        `<li><input id="${id}" placeholder="Search" type="text" class="form-control dropdown-item" />${opts}<li>`;
+      opts = `<li><input id="${id}" placeholder="Search" type="text" class="form-control dropdown-item" />${opts}<li>`;
     }
 
-    $(`#${this.ns}-variables`).html(
-      opts,
-    );
+    $(`#${this.ns}-variables`).html(opts);
     this.#bindVariableAdd();
     this.#handleSearch(id);
   }
@@ -115,33 +116,42 @@ class Filter {
 
     let timeout;
 
+    $(`#${id}`).off("keyup");
     $(`#${id}`).on("keyup", (e) => {
       clearTimeout(timeout);
 
       setTimeout(() => {
         let query = $(e.target).val().toLowerCase();
 
-        $(`#${this.ns}-variables`).find(".dropdown-item").each((i, el) => {
-          if (i == 0) {
-            return;
-          }
+        $(`#${this.ns}-variables`)
+          .find("li")
+          .each((i, el) => {
+            if (i == 0) {
+              return;
+            }
 
-          let value = $(el).data("value").toLowerCase();
+            let value = $(el).find("strong").data("group");
 
-          if (value.includes(query)) {
-            $(el).show();
-            return;
-          }
+            if (!value) value = $(el).find("a").data("value");
 
-          let text = $(el).text();
+            if (!value) return;
 
-          if (text.includes(query)) {
-            $(el).show();
-            return;
-          }
+            value = value.toLowerCase();
 
-          $(el).hide();
-        });
+            if (value.includes(query)) {
+              $(el).show();
+              return;
+            }
+
+            let text = $(el).text();
+
+            if (text.includes(query)) {
+              $(el).show();
+              return;
+            }
+
+            $(el).hide();
+          });
       }, 250);
     });
   }
@@ -207,26 +217,21 @@ class Filter {
   }
 
   #send() {
-    Shiny.setInputValue(
-      `${this.ns}-values`,
-      this.values,
-    );
+    Shiny.setInputValue(`${this.ns}-values`, this.values);
   }
 
   #insertNumeric(data) {
     const id = this.#makeId();
-    const input =
-      `<input id="${id}" type="text" class="js-range-slider filter-input" value="" />`;
+    const input = `<input id="${id}" type="text" class="js-range-slider filter-input" value="" />`;
     this.#appendFilter(data, input);
-    $(`#${id}`)
-      .ionRangeSlider({
-        min: data.min,
-        max: data.max,
-        skin: "shiny",
-        grid: true,
-        step: data.step,
-        type: "double",
-      });
+    $(`#${id}`).ionRangeSlider({
+      min: data.min,
+      max: data.max,
+      skin: "shiny",
+      grid: true,
+      step: data.step,
+      type: "double",
+    });
 
     this.values[data.name] = [data.min, data.max];
     this.#send();
@@ -237,9 +242,10 @@ class Filter {
 
     let timeout;
     $(`#${id}`).on("change", (event) => {
-      this.values[data.name] = $(event.target).val().split(";").map((el) =>
-        parseFloat(el)
-      );
+      this.values[data.name] = $(event.target)
+        .val()
+        .split(";")
+        .map((el) => parseFloat(el));
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         this.#send();
@@ -249,8 +255,7 @@ class Filter {
 
   #insertCharacter(data) {
     const id = this.#makeId();
-    const input =
-      `<input id="${id}" value="" type="text" class="form-control filter-input"/>`;
+    const input = `<input id="${id}" value="" type="text" class="form-control filter-input"/>`;
     this.#appendFilter(data, input);
     this.values[data.name] = "";
     this.#send();
@@ -270,17 +275,19 @@ class Filter {
   }
 
   #insertFactor(data) {
-    const opts = data.values.map((el) => {
-      if (el == "null") {
-        return "";
-      }
+    const opts = data.values
+      .map((el) => {
+        if (el == "null") {
+          return "";
+        }
 
-      if (el == null) {
-        return;
-      }
+        if (el == null) {
+          return;
+        }
 
-      return `<option value="${el}">${el}</option>`;
-    }).join("");
+        return `<option value="${el}">${el}</option>`;
+      })
+      .join("");
 
     const id = this.#makeId();
     const input = `<select id="${id}" class="filter-input">${opts}</select>`;
@@ -324,9 +331,12 @@ class Filter {
 
     $(`.${id}-date`).on("change", (event) => {
       let values = [];
-      $(event.target).closest(".input-group").find("input").each((i, el) => {
-        values.push($(el).val());
-      });
+      $(event.target)
+        .closest(".input-group")
+        .find("input")
+        .each((i, el) => {
+          values.push($(el).val());
+        });
       this.values[data.name] = values;
       this.#send();
     });
@@ -358,18 +368,21 @@ class Filter {
 
     $(`.${id}-logical`).on("change", (event) => {
       let values = [];
-      $(event.target).closest(".logical-filter").find("input").each((i, el) => {
-        let val = true;
-        if (i == 1) {
-          val = false;
-        }
+      $(event.target)
+        .closest(".logical-filter")
+        .find("input")
+        .each((i, el) => {
+          let val = true;
+          if (i == 1) {
+            val = false;
+          }
 
-        if (!$(el).is(":checked")) {
-          return;
-        }
+          if (!$(el).is(":checked")) {
+            return;
+          }
 
-        values.push(val);
-      });
+          values.push(val);
+        });
       this.values[data.name] = values;
       this.#send();
     });
