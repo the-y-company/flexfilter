@@ -16,7 +16,7 @@ class Filter {
       .then((res) => res.json())
       .then((data) => {
         let groups = data.map((el) => el.group);
-        groups = [...new Set(groups)];
+        groups = [...new Set(groups)].filter((el) => el != null);
 
         if (!groups.length) {
           this.#variableInput(data);
