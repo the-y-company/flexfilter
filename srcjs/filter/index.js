@@ -70,7 +70,9 @@ class Filter {
           .map((el) => {
             return `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${
               this.ns
-            }-var" data-grp="${el.group}" data-value="${el.name}">${el.label || el.name}</a></li>`;
+            }-var" data-grp="${el.group}" data-value="${el.name}">${
+              el.label || el.name
+            }</a></li>`;
           })
           .join("");
 
@@ -123,6 +125,7 @@ class Filter {
       setTimeout(() => {
         let query = $(e.target).val().toLowerCase();
 
+        let lastGroupFound = "";
         $(`#${this.ns}-variables`)
           .find("li")
           .each((i, el) => {
@@ -142,11 +145,22 @@ class Filter {
 
             value = value.toLowerCase();
 
+            if (type == "item") {
+              let group = $(el).find("a").data("grp");
+              if (group.toLowerCase() == lastGroupFound) {
+                $(`[data-group='${group}']`).parent().show();
+                $(el).show();
+                return;
+              }
+            }
+
             if (value.includes(query)) {
               if (type == "item") {
                 let group = $(el).find("a").data("grp");
                 $(`[data-group='${group}']`).parent().show();
               }
+              if (type == "group") lastGroupFound = value;
+
               $(el).show();
               return;
             }
@@ -154,6 +168,12 @@ class Filter {
             let text = $(el).text();
 
             if (text.includes(query)) {
+              if (type == "item") {
+                let group = $(el).find("a").data("grp");
+                $(`[data-group='${group}']`).parent().show();
+              }
+              if (type == "group") lastGroupFound = value;
+
               $(el).show();
               return;
             }
