@@ -38,15 +38,17 @@ class Filter {
 
       if (!this.groups) {
         $(`#${this.ns}-variables`).append(
-          `<li><a class="dropdown-item ${this.ns}-var" data-value="${
-            data.name
-          }">${data.label || data.name}</a></li>`,
+          `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${
+            this.ns
+          }-var" data-value="${data.name}">${data.label || data.name}</a></li>`,
         );
       } else {
         $(
-          `<li><a class="dropdown-item ${this.ns}-var" data-value="${
-            data.name
-          }">${data.label || data.name}</a></li>`,
+          `<li><a style="white-space: pre-wrap;cursor:pointer;" class="dropdown-item ${
+            this.ns
+          }-var" data-grp="${data.group}" data-value="${data.name}">${
+            data.label || data.name
+          }</a></li>`,
         ).insertAfter(
           $(`#${this.ns}-variables`)
             .find(`[data-group="${data.group}"]`)
@@ -226,7 +228,9 @@ class Filter {
 
   #appendFilter(data, content) {
     const id = this.#makeId();
-    const card = `<div id=${id} data-name="${data.name}" class="card mb-1">
+    const card = `<div id=${id} data-group="${data.group}" data-name="${
+      data.name
+    }" class="card mb-1">
       <div class="card-body">
         <div class="d-flex">
           <div class="flex-grow-1">
@@ -245,7 +249,7 @@ class Filter {
   }
 
   #send() {
-    Shiny.setInputValue(`${this.ns}-values`, this.values);
+    window.Shiny.setInputValue(`${this.ns}-values`, this.values);
   }
 
   #insertNumeric(data) {
@@ -418,7 +422,7 @@ class Filter {
 }
 
 $(() => {
-  Shiny.addCustomMessageHandler("flexfilter-endpoints", (msg) => {
+  window.Shiny.addCustomMessageHandler("flexfilter-endpoints", (msg) => {
     const filter = new Filter(msg);
     filter.init();
   });

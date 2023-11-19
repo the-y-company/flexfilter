@@ -1,3 +1,6 @@
+install: check
+	R -e "devtools::install()"
+
 check: document
 	R -e "devtools::check()"
 
@@ -10,6 +13,6 @@ bundle_dev:
 document:
 	R -e "devtools::document()"
 
-run: document bundle_dev
+dev: document bundle_dev
 	Rscript test.R
 
