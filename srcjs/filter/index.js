@@ -124,7 +124,7 @@ class Filter {
     $(`#${id}`).on("keyup", (e) => {
       clearTimeout(timeout);
 
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         let query = $(e.target).val().toLowerCase();
 
         let lastGroupFound = "";
@@ -149,7 +149,7 @@ class Filter {
 
             if (type == "item") {
               let group = $(el).find("a").data("grp");
-              if (group.toLowerCase() == lastGroupFound) {
+              if (group != "" && group.toLowerCase() == lastGroupFound) {
                 $(`[data-group='${group}']`).parent().show();
                 $(el).show();
                 return;
