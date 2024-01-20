@@ -308,6 +308,7 @@ class Filter {
 
   #insertFactor(data) {
     const opts = data.values
+      .sort()
       .map((el) => {
         if (el == "null") {
           return "";
