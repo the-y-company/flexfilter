@@ -8,3 +8,5 @@
 ^makefile$
 ^test\.R$
 ^\.eslintrc\.js$
+^\.venv$
+^mkdocs\.yml$

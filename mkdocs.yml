@@ -1,0 +1,7 @@
+site_name: flexfilter
+
+theme:
+  name: material
+  palette:
+    primary: deep purple
+    accent: indigo
