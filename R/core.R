@@ -15,10 +15,10 @@
 #' @name flexfilter
 #' 
 #' @export
-flexfilterUI <- function(id, btn_class = "mt-2"){
+flexfilterUI <- function(id, btn_class = "mt-2"){ # nolint
   ns <- NS(id)
 
-	tagList(
+  tagList(
     div(
       id = ns("filter"),
       div(
@@ -45,7 +45,7 @@ flexfilterUI <- function(id, btn_class = "mt-2"){
     fontawesomeDependency(),
     datePickerDependency(),
     flexFilterDependency()
-	)
+  )
 }
 
 #' @importFrom shiny moduleServer observe reactive
@@ -58,12 +58,12 @@ flexfilter_server <- function(id, data, variables_only = FALSE, search_threshold
   if(missing(data))
     stop("Missing `data`")
 
-	moduleServer(
-		id,
-		function(
-			input, 
-			output, 
-			session
+  moduleServer(
+    id,
+    function(
+      input, 
+      output, 
+      session
     ){
       ns <- session$ns
 
@@ -107,7 +107,7 @@ flexfilter_server <- function(id, data, variables_only = FALSE, search_threshold
           exprs = make_exprs(data, input$values)
         )
       })
-		}
-	)
+    }
+  )
 }
 

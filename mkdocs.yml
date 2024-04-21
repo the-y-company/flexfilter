@@ -2,6 +2,44 @@ site_name: flexfilter
 
 theme:
   name: material
+  custom_dir: docs/overrides
+  favicon: images/ylogo.png
+  use_pygments: true
   palette:
-    primary: deep purple
-    accent: indigo
+    primary: blue grey
+    accent: orange
+  features:
+    - navigation.instant
+    - search.suggest
+
+markdown_extensions:
+    - admonition
+    - meta
+    - smarty
+    - pymdownx.highlight:
+        linenums: true
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - attr_list
+    - toc:
+        permalink: True
+        separator: "-"
+
+plugins:
+  - search
+
+extra:
+  generator: false
+
+repo_url: https://github.com/the-y-company/flexfilter
+repo_name: Github
+site_description: Flexible filter for Shiny
+site_author: The Y Company
+
+nav:
+  - Home: index.md
+  - Install: installation.md
+  - Get Started: get-started.md
+  - Attributes: attributes.md
+  - Variables: variables.md
+  - Search: search.md

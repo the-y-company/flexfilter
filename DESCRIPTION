@@ -6,15 +6,15 @@ Authors@R:
     person(given = "John",
            family = "Coene",
            role = c("aut", "cre"),
-           email = "jcoenep@gmail.com",
+           email = "john@the-y-company.com",
            comment = c(ORCID = "0000-0002-6637-4107")),
     person(family = "Opifex", role = c("fnd"))
   )
-Description: Dynamic filter for 'Shiny'.
-License: file LICENSE
+Description: Flexible filter for 'Shiny'.
+License: GPL (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.0
+RoxygenNote: 7.3.1
 Imports:
   htmltools,
   jsonlite,

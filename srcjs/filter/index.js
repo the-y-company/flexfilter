@@ -167,7 +167,7 @@ class Filter {
               return;
             }
 
-            let text = $(el).text();
+            let text = $(el).text().toLowerCase();
 
             if (text.includes(query)) {
               if (type == "item") {
@@ -238,7 +238,7 @@ class Filter {
             <p class="text-muted p-0 m-0">${data.description || ""}</p>
           </div>
           <div class="flex-shrink-1">
-            <a class="float-right filter-remove"><i class="fa fa-trash text-warning"></i></a>
+            <a class="float-right filter-remove"><i class="fa fa-trash text-danger"></i></a>
           </div>
         </div>
         ${this.variablesOnly ? "" : content}

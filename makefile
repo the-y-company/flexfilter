@@ -10,13 +10,13 @@ bundle:
 bundle_dev:
 	R -e "packer::bundle_dev()"
 
-document: site
+document: mkdoc
 	R -e "devtools::document()"
 
-site:
+mkdoc:
 	mkdocs build
 	
-site_dev:
+mkdoc_dev:
 	mkdocs serve
 
 dev: document bundle_dev

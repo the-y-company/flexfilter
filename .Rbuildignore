@@ -10,3 +10,4 @@
 ^\.eslintrc\.js$
 ^\.venv$
 ^mkdocs\.yml$
+^LICENSE\.md$
