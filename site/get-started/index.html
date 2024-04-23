@@ -65,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -402,6 +402,10 @@ want to select from your <code>data.frame</code>.</p>
 <li><code>date</code>: creates a date range input.</li>
 <li><code>logical</code>: creates a checkbox input.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note how the expression returned by the <code>flexfilter_server()</code> function is being used below (<code>dplyr::filter(data, !!!values()$exprs)</code>)</p>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
