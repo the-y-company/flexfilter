@@ -6,7 +6,7 @@ theme:
   favicon: images/ylogo.png
   use_pygments: true
   palette:
-    primary: blue grey
+    primary: teal
     accent: orange
   features:
     - navigation.instant
