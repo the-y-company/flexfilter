@@ -402,6 +402,10 @@ want to select from your <code>data.frame</code>.</p>
 <li><code>date</code>: creates a date range input.</li>
 <li><code>logical</code>: creates a checkbox input.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note how the expression returned by the <code>flexfilter_server()</code> function is being used below (<code>dplyr::filter(data, !!!values()$exprs)</code>)</p>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -499,7 +503,11 @@ want to select from your <code>data.frame</code>.</p>
   <div style="flex-shrink:1">
     <br>
     <p>
-      Funded by <a href="https://www.astho.org">The Association of State and Territorial Health Officials<a/>
+      This product was funded by <a style="color:var(--md-typeset-a-color)" href="https://www.astho.org">The Association of State and Territorial Health Officials<a/>
+      and was supported by <a style="color:var(--md-typeset-a-color)" href="https://www.cdc.gov/infrastructure/phig/index.html">OE22-2203: Strengthening U.S. Public Health Infrastructure, Workforce, and Data Systems grant</a>
+      Number 6 NE11OE000066, funded by CDC. 
+      Its contents are solely the responsibility of the authors and do not necessarily represent 
+      the official views of CDC.
     </p>
   </div>
   <div style="flex-shrink:1;padding-left:1rem;">

@@ -11,3 +11,5 @@
 ^\.venv$
 ^mkdocs\.yml$
 ^LICENSE\.md$
+^docs$
+^site$

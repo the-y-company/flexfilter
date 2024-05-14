@@ -392,6 +392,10 @@
 <p>You can also use the flexfilter not to filter but to display and select
 columns from the <code>data.frame</code>, this has little to advantage over using a selectize 
 input; it was added to have a consistent look and feel with the filter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>flexfilter_server()</code> will then return a <code>vector</code> of variables to select.</p>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -450,18 +454,19 @@ input; it was added to have a consistent look and feel with the filter.</p>
 <span class="w">  </span><span class="n">values</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">flexfilter_server</span><span class="p">(</span><span class="s">&quot;filter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">variables_only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="w">  </span><span class="n">output</span><span class="o">$</span><span class="n">table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">DT</span><span class="o">::</span><span class="nf">renderDT</span><span class="p">({</span>
-<span class="w">    </span><span class="nf">if</span><span class="p">(</span><span class="o">!</span><span class="nf">length</span><span class="p">(</span><span class="nf">values</span><span class="p">()</span><span class="o">$</span><span class="n">exprs</span><span class="p">))</span>
+<span class="w">    </span><span class="nf">if</span><span class="p">(</span><span class="o">!</span><span class="nf">length</span><span class="p">(</span><span class="nf">values</span><span class="p">()))</span>
 <span class="w">      </span><span class="nf">return</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 <span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">      </span><span class="c1"># filter values</span>
-<span class="w">      </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">filter</span><span class="p">(</span><span class="o">!!!</span><span class="nf">values</span><span class="p">()</span><span class="o">$</span><span class="n">exprs</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="nf">values</span><span class="p">())</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">      </span><span class="n">DT</span><span class="o">::</span><span class="nf">datatable</span><span class="p">()</span>
 <span class="w">  </span><span class="p">})</span>
 <span class="p">}</span>
 
 <span class="nf">shinyApp</span><span class="p">(</span><span class="n">ui</span><span class="p">,</span><span class="w"> </span><span class="n">server</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p><img alt="" src="../images/search.png" /></p>
 
 
 
@@ -488,7 +493,11 @@ input; it was added to have a consistent look and feel with the filter.</p>
   <div style="flex-shrink:1">
     <br>
     <p>
-      Funded by <a href="https://www.astho.org">The Association of State and Territorial Health Officials<a/>
+      This product was funded by <a style="color:var(--md-typeset-a-color)" href="https://www.astho.org">The Association of State and Territorial Health Officials<a/>
+      and was supported by <a style="color:var(--md-typeset-a-color)" href="https://www.cdc.gov/infrastructure/phig/index.html">OE22-2203: Strengthening U.S. Public Health Infrastructure, Workforce, and Data Systems grant</a>
+      Number 6 NE11OE000066, funded by CDC. 
+      Its contents are solely the responsibility of the authors and do not necessarily represent 
+      the official views of CDC.
     </p>
   </div>
   <div style="flex-shrink:1;padding-left:1rem;">
