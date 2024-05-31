@@ -5,9 +5,11 @@
 
 Flexible filters for shiny.
 
-## Example
+Create a filter from a `data.frame` that enables users to dynamically add
+filters on each column, the filter is dynamically generating the appropriate
+input for the selected column based on the type of the column.
 
-This is a basic example which shows you how to solve a common problem:
+## Example
 
 ```r
 library(shiny)
