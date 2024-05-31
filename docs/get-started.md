@@ -56,4 +56,4 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 
-![](images/get-started.png)
+![](images/search.gif)
