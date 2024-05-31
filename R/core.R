@@ -9,13 +9,14 @@
 #' @param btn_class Additional classes to pass to the button
 #' @param search_threshold if the number of variables available exceed the `search_threshold`
 #' then a search box appears.
+#' @param label Label of the button.
 #' 
 #' @importFrom shiny tagList div NS tags
 #' 
 #' @name flexfilter
 #' 
 #' @export
-flexfilterUI <- function(id, btn_class = "mt-2"){ # nolint
+flexfilterUI <- function(id, btn_class = "mt-2", label = "Add variable"){ # nolint
   ns <- NS(id)
 
   tagList(
@@ -32,7 +33,7 @@ flexfilterUI <- function(id, btn_class = "mt-2"){ # nolint
           type = "button",
           `data-bs-toggle` = "dropdown",
           `aria-expanded` = "false",
-          "Add variable"
+          label
         ),
         tags$ul(
           id = ns("variables"),

@@ -6,7 +6,7 @@
 \alias{flexfilter_server}
 \title{Flex filter}
 \usage{
-flexfilterUI(id, btn_class = "mt-2")
+flexfilterUI(id, btn_class = "mt-2", label = "Add variable")
 
 flexfilter_server(id, data, variables_only = FALSE, search_threshold = 20L)
 }
@@ -14,6 +14,8 @@ flexfilter_server(id, data, variables_only = FALSE, search_threshold = 20L)
 \item{id}{Module id.}
 
 \item{btn_class}{Additional classes to pass to the button}
+
+\item{label}{Label of the button.}
 
 \item{data}{Dataset.}
 

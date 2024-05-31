@@ -1,17 +1,17 @@
 install: check
-	R -e "devtools::install()"
+	R -s -e "devtools::install()"
 
 check: document
-	R -e "devtools::check()"
+	R -s -e "devtools::check()"
 
 bundle:
-	R -e "packer::bundle_prod()"
+	R -s -e "packer::bundle_prod()"
 
 bundle_dev:
-	R -e "packer::bundle_dev()"
+	R -s -e "packer::bundle_dev()"
 
 document: mkdoc
-	R -e "devtools::document()"
+	R -s -e "devtools::document()"
 
 mkdoc:
 	mkdocs build
