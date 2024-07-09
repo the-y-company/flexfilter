@@ -1,7 +1,7 @@
 #' Flex filter
-#' 
+#'
 #' Flex filter component.
-#' 
+#'
 #' @param id Module id.
 #' @param data Dataset.
 #' @param variables_only Set to `TRUE` to not display filters and only display
@@ -10,13 +10,17 @@
 #' @param search_threshold if the number of variables available exceed the `search_threshold`
 #' then a search box appears.
 #' @param label Label of the button.
-#' 
+#'
 #' @importFrom shiny tagList div NS tags
-#' 
+#'
 #' @name flexfilter
-#' 
+#'
 #' @export
-flexfilterUI <- function(id, btn_class = "mt-2", label = "Add variable"){ # nolint
+flexfilterUI <- function(
+  id,
+  btn_class = "mt-2",
+  label = "Add variable"
+){ # nolint
   ns <- NS(id)
 
   tagList(
@@ -52,7 +56,13 @@ flexfilterUI <- function(id, btn_class = "mt-2", label = "Add variable"){ # noli
 #' @importFrom shiny moduleServer observe reactive
 #' @rdname flexfilter
 #' @export
-flexfilter_server <- function(id, data, variables_only = FALSE, search_threshold = 20L){
+flexfilter_server <- function(
+  id,
+  data,
+  variables_only = FALSE,
+  search_threshold = 20L,
+  single = FALSE
+){
   if(missing(id))
     stop("Missing `id`")
 
@@ -84,6 +94,7 @@ flexfilter_server <- function(id, data, variables_only = FALSE, search_threshold
         session$sendCustomMessage(
           "flexfilter-endpoints",
           list(
+            single = single,
             pathVariables = path_variables,
             pathVariable = path_variable,
             variablesOnly = variables_only,

@@ -8,7 +8,13 @@
 \usage{
 flexfilterUI(id, btn_class = "mt-2", label = "Add variable")
 
-flexfilter_server(id, data, variables_only = FALSE, search_threshold = 20L)
+flexfilter_server(
+  id,
+  data,
+  variables_only = FALSE,
+  search_threshold = 20L,
+  single = FALSE
+)
 }
 \arguments{
 \item{id}{Module id.}

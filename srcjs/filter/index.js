@@ -5,6 +5,7 @@ class Filter {
     this.ns = opts.ns;
     this.variablesOnly = opts.variablesOnly;
     this.threshold = opts.searchThreshold;
+    this.single = opts.single;
     this.groups = false;
 
     this.values = {};
@@ -55,6 +56,11 @@ class Filter {
             .parent(),
         );
       }
+
+      if(this.single){
+        $(`#${this.ns}-add`).show();
+      }
+
       this.#bindVariableAdd();
       delete this.values[data.name];
       this.#send();
@@ -203,6 +209,10 @@ class Filter {
       if (this.hasSearch) {
         $(`#${this.ns}-variables`).find(".dropdown-item").val("");
         $(`#${this.ns}-variables`).find(".dropdown-item").show();
+      }
+
+      if(this.single){
+        $(`#${this.ns}-add`).hide();
       }
     });
   }
