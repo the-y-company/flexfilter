@@ -1,0 +1,1228 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <link href="https://www.astho.org/error/404/" rel="canonical" />
+    <meta property="title" content="Page Not Found">
+<meta property="description" content="">
+<meta property="keywords" content="">
+
+    <meta property="og:title" content="Page Not Found">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.astho.org/error/404/">
+<meta property="og:image" content="https://www.astho.org/globalassets/masterpage/header/astho-logo.png">
+<meta property="og:description" content="">
+<meta property="article:category" content="">
+<meta property="article:published_time" content="8/8/2024 7:08:54 PM">
+<meta property="article:modified_time" content="08/08/2024 19:08:54">
+<meta property="article:expiration_time" content="">
+
+    <meta name="twitter:title" content="Page Not Found">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.astho.org/globalassets/masterpage/header/astho-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+    
+    <title>Page Not Found | ASTHO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<script src='https://public.tableau.com/javascripts/api/tableau-2.9.2.min.js'></script>
+
+
+<script type="text/javascript" src='//tools.cdc.gov/api/embed/html/js/embed-2.0.3.js' ></script>
+<script type="text/javascript" src='//tools.cdc.gov/api/embed/html/js/jquery-1.9.1.min.js></script>
+<script type="text/javascript" src='//tools.cdc.gov/TemplatePackage/contrib/widgets/tp-widget-external-loader.js' ></script>
+<script src="https://kit.fontawesome.com/7ff47e4c70.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61d8a8ac06175100190c14f3&product=sticky-share-buttons" async="async"></script>
+<script async src="https://siteimproveanalytics.com/js/siteanalyze_6175884.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PLLHGV9');</script>
+<!-- End Google Tag Manager -->
+
+    <script>
+!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{src: "https://js.monitor.azure.com/scripts/b/ai.2.gbl.min.js", crossOrigin: "anonymous", cfg: { instrumentationKey:'c27624d9-fc73-4676-a0ba-e81bb09e7ea4', disableCookiesUsage: false }});
+</script>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Static/img/apple-touch-icon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Static/img/favicon-32x32.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Static/img/favicon-16x16.svg">
+    <link rel="icon" href="/Static/img/favicon.ico">
+    <link rel="manifest" href="/Static/img/site.webmanifest">
+    <link rel="preconnect" href="https://static.doubleclick.net">
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+    <link rel="preconnect" href="https://yt3.ggpht.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.min.css" integrity="sha512-06CZo7raVnbbD3BlY8/hGUoUCuhk8sTdVGV3m3nuh9i2R+UmkLbLRTE/My8TuJ3ALbDulhBObJQWtOUt0mXzNQ==" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ["Jost", "Material Icons", "Material Icons Outlined"]
+            }
+        };
+        (function (d) {
+            var wf = d.createElement("script"),
+                s = d.scripts[0];
+            wf.src =
+                "https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js";
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" async=""></script>
+    <script>WebFontConfig = { google: { families: ["Jost", "Material Icons", "Material Icons Outlined"] } }, function (e) { var t = e.createElement("script"), o = e.scripts[0]; t.src = "https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js", t.async = !0, o.parentNode.insertBefore(t, o) }(document);</script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/plugins/unveilhooks/ls.unveilhooks.min.js" integrity="sha512-FQ0MgvxcxFX4MSh8AWiQT+McTjZkTVrzEdi4Gv5j5/VhGRvO3HNoH/ZO4ruhZTKVXvZippdjoeXk+7bns6jfTQ==" crossorigin="anonymous"></script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/plugins/bgset/ls.bgset.min.js" integrity="sha512-JLxcUfxzd7KDVT3W7zzJ4FIScbkEKRQXmK1o1cFWcJI6H6JMoI3wN/Di3bSWIMHOQEhvX+Hkoh1B1ys5kdZvFg==" crossorigin="anonymous"></script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.min.js" integrity="sha512-eFH1e5TOppR2v/FrKk5FT/W9IHX25gKlrlTjIAuuG3pdDTMi3s8nR5PftWQ31fMpaF7P6NmlQXJjBwORWMLRLQ==" crossorigin="anonymous"></script>
+    <link href="/Static/main.css?v=1_0_0_28898" rel="stylesheet" async />
+    <link href="/Static/appforcms.css?v=1_0_0_28898" rel="stylesheet" async />
+    <link href="/Static/appforcms2.css?v=1_0_0_28898" rel="stylesheet" async />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" async />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" async></script>
+
+    <script src="/Static/appforcms.umd.min.js?v=1_0_0_28898" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="/Static/storytelling-main.js?v=1_0_0_28898" async></script>
+    <script src="/Static/ga.js?v=1_0_0_28898" async></script>
+    <script src="/Static/mi.js?v=1_0_0_28898" async></script>
+    <script src="/Static/nm.js?v=1_0_0_28898" async></script>
+    <script src="/Static/vt.js?v=1_0_0_28898" async></script>
+    <style type="text/css">
+        div.block {
+            display: inline-block;
+            padding-left: 0;
+            padding-right: 0;
+            vertical-align: top;
+        }
+
+        .p-1 {
+            padding: .25rem !important
+        }
+
+        .p-3 {
+            padding: 1rem !important
+        }
+
+        .p-5 {
+            padding: 3rem !important
+        }
+    </style>
+</head>
+<body class="relative">
+    <noscript><strong>We're sorry but ASTHO doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+    <svg class="hidden-def" style="display: none;">
+        <symbol id="iconFacebook"><path d="M13.2,12.3h-2.8V16h2.8v11h4.6V16h3.3l0.4-3.7h-3.7v-1.6c0-0.9,0.2-1.2,1-1.2h2.7V5H18c-3.3,0-4.8,1.5-4.8,4.2V12.3z"></path></symbol>
+        <symbol id="iconTwitter"><path d="M26.5,10.7c-0.8,0.4-1.6,0.6-2.5,0.7c0.9-0.5,1.6-1.4,1.9-2.4c-0.9,0.5-1.8,0.9-2.7,1.1c-0.8-0.9-1.9-1.4-3.2-1.4 c-2.8,0-4.8,2.6-4.2,5.3c-3.6-0.2-6.7-1.9-8.9-4.5c-1.2,1.9-0.7,4.5,1.2,5.7c-0.7,0-1.4-0.2-1.9-0.5c-0.1,2,1.4,3.9,3.4,4.3 c-0.6,0.2-1.3,0.2-1.9,0.1c0.5,1.8,2.1,3,4,3c-1.8,1.4-4.1,2-6.4,1.8c1.9,1.2,4.2,1.9,6.6,1.9c8,0,12.5-6.7,12.3-12.8 C25.2,12.3,25.9,11.5,26.5,10.7z"></path></symbol>
+        <symbol id="iconYouTube"><path d="M22.8,9.2c-3.2-0.3-10.3-0.3-13.5,0C5.8,9.3,5.3,11.5,5.3,17s0.4,7.6,3.9,7.8c3.2,0.2,10.3,0.2,13.5,0 c3.5-0.3,3.9-2.3,3.9-7.8C26.7,11.5,26.2,9.4,22.8,9.2z M13.3,20.5v-7.1l7.1,3.6L13.3,20.5z"></path></symbol>
+        <symbol id="iconLinkedIn"><path d="M9.6,7.3c0,1.3-1,2.3-2.3,2.3S5,8.6,5,7.3S6,5,7.3,5S9.6,6,9.6,7.3z M9.6,11.4H5V26h4.6V11.4z M16.9,11.4h-4.6V26h4.6v-7.7 c0-4.3,5.5-4.7,5.5,0V26H27v-9.2c0-7.2-8.1-6.9-10-3.4V11.4z"></path></symbol>
+        <symbol id="iconInstagram"><path d="M10.62 4C6.97 4 4 6.97 4 10.62C4 11.7 4 20.3 4 21.38C4 25.03 6.97 28 10.62 28C11.7 28 20.3 28 21.38 28C25.03 28 28 25.03 28 21.38C28 20.3 28 11.7 28 10.62C28 6.97 25.03 4 21.38 4C19.23 4 11.7 4 10.62 4ZM21.38 25.87C20.3 25.87 11.7 25.87 10.62 25.87C8.15 25.87 6.13 23.85 6.13 21.38C6.13 20.3 6.13 11.7 6.13 10.62C6.13 8.15 8.15 6.13 10.62 6.13C11.7 6.13 20.3 6.13 21.38 6.13C23.85 6.13 25.87 8.15 25.87 10.62C25.87 11.34 25.87 14.92 25.87 21.38C24.53 24.37 23.03 25.87 21.38 25.87Z" id="a2SiHKlAZu"></path><path d="M9.82 16C9.82 19.41 12.59 22.18 16 22.18C19.41 22.18 22.18 19.41 22.18 16C22.18 12.59 19.41 9.82 16 9.82C12.59 9.82 9.82 12.59 9.82 16ZM11.95 16C11.95 13.76 13.76 11.95 16 11.95C18.24 11.95 20.05 13.76 20.05 16C20.05 18.24 18.24 20.05 16 20.05C13.76 20.05 11.95 18.24 11.95 16Z" id="bpNmKnEaN"></path><path d="M21.34 8.47C21.05 8.76 20.88 9.16 20.88 9.57C20.88 9.98 21.05 10.39 21.34 10.68C21.63 10.97 22.03 11.13 22.44 11.13C22.86 11.13 23.26 10.97 23.55 10.68C23.84 10.39 24.01 9.98 24.01 9.57C24.01 9.16 23.84 8.76 23.55 8.47C23.26 8.18 22.86 8.01 22.44 8.01C22.03 8.01 21.63 8.18 21.34 8.47Z" id="f8ttCdUz"></path></symbol>
+    </svg>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLLHGV9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+//TIMELINE
+(function () {
+  "use strict";
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+})();
+
+
+//Timeline script
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+      
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});
+
+         
+
+//SCRIPT FOR INFOGRAM EMBED
+!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");
+
+</script>
+
+<style>
+/*Podcast Embed Shadow*/
+.podcast-embed {
+box-shadow: 8px 8px 15px 3px rgba(0,0,0,.3); 
+max-width: 850px; 
+border: none;
+}
+
+/*Feature Shadow - blog and homepage promo*/
+.feature-shadow {
+box-shadow: 8px 8px 15px 3px rgba(0,0,0,.3); 
+border: none; 
+max-width: 620px; 
+width: 100%;
+}
+
+/*Shadow*/
+.a-shadow {
+box-shadow: 8px 8px 15px 3px rgba(0,0,0,.3); 
+}
+
+/*Orange font*/
+.orange-font {
+color: #C35322;
+}
+
+/*Orange HR - ABOUT US ONLY*/
+.orange-hr {
+padding-bottom: 2px; 
+border-bottom: 2px solid #C35322;
+
+}
+
+/*HR General style no color*/
+.hr-gen {
+height: 2px;
+border: none;
+
+}
+
+
+/*Orange HR*/
+.orange-hr-gen {
+height: 2px;
+background-color: #C35322;
+border: none;
+}
+
+/*Dark Blue HR*/
+.darkblue-hr-gen {
+height: 2px;
+background-color: #01466a;
+border: none;
+}
+
+/*Blue HR*/
+.blue-hr-gen {
+height: 2px;
+background-color: #267AAB;
+border: none;
+}
+
+/*Margin*/
+.margin-top-12 {
+margin-top: 12px;
+}
+
+.margin-bottom-12 {
+margin-bottom: 12px;
+}
+
+.margin-notop-indent {
+margin-top: 0px !important;
+margin-left: 20px;
+}
+
+.margin-nobottom {
+margin-bottom: 0px !important;
+}
+
+/*Background color*/
+.darkblue-background {
+background-color: #01466a;
+}
+
+.orange-background {
+background-color: #C35322;
+}
+
+.yellow-background {
+background-color: #fcc56c;
+}
+
+.ltbrown-background {
+background-color: #8B644F;
+}
+
+.turq-background {
+background-color: #367AAB;
+}
+
+
+/*padding*/
+.padding-bottom-4 {
+Padding-bottom: 4px;
+}
+
+.padding-4 {
+Padding: 4px;
+}
+
+
+
+/*photo and caption*/
+.photocaption {
+margin-top: 0px; 
+text-align: center; 
+font-size: 1.5rem;
+}
+
+/*blockquote*/
+/*USED IN PRESS RELEASES*/
+.blockquote-orange {
+	margin: 0.85em 20px;
+	padding-left: 50px;
+	background: transparent url(quote.gif) no-repeat; 
+border-left: 5px solid #C35322;}
+
+/*blockquote with color bar, gray background, and color quote - DO NOT USE*/
+.orange-blockquote{
+  font-size: 1.1em;
+  width:70%;
+  margin:20px auto;
+  font-style:italic;
+  color: #555555;
+  padding:0.7em 30px 0.7em 75px;
+  border-left:8px solid #C35322 ;
+  line-height:1.3;
+  position: relative;
+  background:#E5E5E5;
+}
+
+.small-indent {
+width: 83%;
+}
+
+.orange-blockquote::before{
+  //content: "\201C";
+  color:#C35322;
+  font-size:2.5em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.orange-blockquote::after{
+  content: '';
+}
+
+.orange-blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:.5em;
+}
+
+/*Timeline styles*/
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.tlcontainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.tlcontainer::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #C35322;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.tlleft {
+  left: 0;
+}
+
+/* Place the container to the right */
+.tlright {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.tlleft::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.tlright::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.tlright::after {
+  left: -12px;
+}
+
+/* The actual content */
+.tlcontent {
+  padding: 20px 30px;
+  //border: medium solid white;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.tlcontent h2, .tlcontent p, tlcontent li {
+color: black;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .tlcontainer {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .tlcontainer::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .tlleft::after, .tlright::after {
+  left: 18px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .tlright {
+  left: 0%;
+  }
+}
+
+/*Fade*/
+.fade {
+  opacity: 1;
+}
+
+/*Storytelling*/
+div.storyfont p {
+font-size: 1.8rem;
+}
+
+div.storyfont a{
+font-size: 1.8rem;
+}
+
+
+/*INSPIRE*/
+.inspireIcon {
+font-size: 80px; 
+margin-top: 24px;
+color: #06476b;
+}
+
+
+</style>
+
+<!--MonQcle maps - NEED A LONGER TERM SOLUTION-->
+<script type="text/javascript">
+
+
+window.addEventListener('message', function(event) {
+  if(height = event.data['height']) {
+    document.getElementByClass('policyiframe').style.height =  height + 'px';
+  }
+});
+
+
+</script>
+
+    
+
+
+
+<div id="app">
+  <main class=main>
+      <section class="nav w-full top-0 left-0">
+          
+          <div>
+          
+
+	<div class="nav-util py-2">
+		<div class="container">
+			<div class="flex justify-end">
+
+
+		<a href="https://account.astho.org/" class="text-white mr-8" >My Profile</a>
+
+		<a href="https://learn.astho.org/" class="text-white mr-8" >e-Learning Center</a>
+
+		<a href="https://my.astho.org/home" class="text-white mr-8" >my.ASTHO</a>
+
+		<a href="/about/contact/" class="text-white mr-8" >Contact Us</a>
+
+			</div>
+			
+					
+		</div>
+	</div>
+
+          </div>
+          <nav class="nav-main py-4 relative">
+
+              <!-- HEADER -->
+
+<div class="container">
+	<div class="flex pt-8 justify-between items-center">
+		
+		<div>
+		<div class="flex cursor-pointer nav-toggle"><i class="material-icons mr-4">menu</i><span class="uppercase">Menu</span></div>
+		</div>
+
+		<div>
+    <div class="navbar flex flex-col items-center">
+
+	<a href="/" target="" class="flex flex-col items-center nav-logo">
+
+
+	<img src="/globalassets/masterpage/header/astho-logo.png" alt="ASTHO logo" class="w-1/2 lg:w-auto" />
+
+	</a>
+
+
+
+        <span class="uppercase lg:block hidden">ASSOCIATION OF STATE AND TERRITORIAL HEALTH OFFICIALS</span>
+    </div>
+		</div>
+
+		<div class="flex lg:flex-row flex-col">
+
+			<div>
+			<div class="flex pr-8 nav-toggle--search cursor-pointer"><i class="material-icons mr-4">search</i><span class="uppercase">Search</span></div>
+			</div>
+
+
+
+		</div>
+	</div>
+</div>
+
+
+
+
+              
+<div class="nav-menu hidden pt-32 pb-16 absolute top-0 left-0 w-full">
+    <div class="container">
+        <div class="flex justify-end">
+            <i class="material-icons nav-menu__close cursor-pointer">close</i>
+        </div>
+            <ul class="list-none pl-0 nav-menu__link-container flex flex-col items-center">
+                    <li>
+                        <h3 class="nav-menu__link">
+
+	<a href="/about/" target="_self" class="" >About Us</a>
+                                <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
+                        </h3>
+                    </li>
+                        <ul class="list-none pl-0 nav-container__l2 hidden">
+                                <li>
+
+	<a href="/about/history/" target="_self" class="" >Our History</a>
+                                </li>
+                                <li>
+
+	<a href="/about/governance/" target="_self" class="" >Leadership and Governance</a>
+                                </li>
+                                <li>
+
+	<a href="/about/partnerships/" target="_self" class="" >Partnerships</a>
+                                </li>
+                                <li>
+
+	<a href="/about/careers/" target="_self" class="" >Careers at ASTHO</a>
+                                </li>
+                                <li>
+
+	<a href="/about/public-health-careers/" target="_self" class="" >Public Health Careers</a>
+                                </li>
+                                <li>
+
+	<a href="/about/strategic-plan/" target="_self" class="" >ASTHO&#x27;s Strategic Plan</a>
+                                </li>
+                                <li>
+
+	<a href="/about/contact/" target="_self" class="" >Contact Us</a>
+                                </li>
+                        </ul>
+                    <li>
+                        <h3 class="nav-menu__link">
+
+	<a href="/members/" target="_self" class="" >Members</a>
+                                <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
+                        </h3>
+                    </li>
+                        <ul class="list-none pl-0 nav-container__l2 hidden">
+                                <li>
+
+	<a href="/members/member-directory/" target="_self" class="" >ASTHO Member Directory</a>
+                                </li>
+                                <li>
+
+	<a href="/members/opportunities/" target="_self" class="" >Funding &amp; Collaboration Opportunities</a>
+                                </li>
+                                <li>
+
+	<a href="https://my.astho.org/home" target="_blank" class="" >my.ASTHO</a>
+                                </li>
+                                <li>
+
+	<a href="/members/alumni-society/" target="_self" class="" >Alumni Society</a>
+                                </li>
+                                <li>
+
+	<a href="/members/slrc/" target="_self" class="" >Senior Leader Reserve Corps</a>
+                                </li>
+                                <li>
+
+	<a href="/members/peer-networks/" target="_self" class="" >Peer Networks</a>
+                                </li>
+                                <li>
+
+	<a href="/members/ali/" target="_self" class="" >ASTHO Leadership Institute</a>
+                                </li>
+                        </ul>
+                    <li>
+                        <h3 class="nav-menu__link">
+
+	<a href="/topic/" target="_self" class="" >Our Work</a>
+                                <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
+                        </h3>
+                    </li>
+                        <ul class="list-none pl-0 nav-container__l2 hidden">
+                                <li>
+
+	<a href="/topic/infectious-disease/covid-19/" target="_self" class="" >COVID-19</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/crisis-communications/" target="_self" class="" >Public Health &amp; Crisis Communications Resource Hub</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/data-modernization-informatics/" target="_self" class="" >Data Modernization and Informatics</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/environmental-health/" target="_self" class="" >Environmental Health</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/evidence-based-public-health/" target="_self" class="" >Evidence-Based Public Health</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/health-equity/" target="_self" class="" >Health Equity</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/infectious-disease/" target="_self" class="" >Infectious Disease</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/leadership-and-workforce-development/" target="_self" class="" >Leadership Development</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/population-health-prevention/" target="_self" class="" >Population Health and Prevention</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/preparedness/" target="_self" class="" >Preparedness</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/public-health-infrastructure/" target="_self" class="" >Public Health Infrastructure and Systems Improvement</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/workforce/" target="_self" class="" >Public Health Workforce</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/research/" target="_self" class="" >Research, Analytics, and Data Visualization</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/territories-freely-associated-states/" target="_self" class="" >Territories and Freely Associated States</a>
+                                </li>
+                                <li>
+
+	<a href="/topic/" target="_self" class="" >View All Topics</a>
+                                </li>
+                        </ul>
+                    <li>
+                        <h3 class="nav-menu__link">
+
+	<a href="/advocacy/" target="_self" class="" >Policy &amp; Advocacy</a>
+                                <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
+                        </h3>
+                    </li>
+                        <ul class="list-none pl-0 nav-container__l2 hidden">
+                                <li>
+
+	<a href="/advocacy/federal-government-affairs/" target="_self" class="" >Federal Government Affairs</a>
+                                </li>
+                                <li>
+
+	<a href="/advocacy/state-health-policy/" target="_self" class="" >State Health Policy</a>
+                                </li>
+                                <li>
+
+	<a href="/advocacy/policy-statements/" target="_self" class="" >Policy Statements</a>
+                                </li>
+                                <li>
+
+	<a href="/advocacy/health-policy-update/" target="_self" class="" >Health Policy Update Series</a>
+                                </li>
+                        </ul>
+                    <li>
+                        <h3 class="nav-menu__link">
+
+	<a href="/education/" target="_self" class="" >Education &amp; Events</a>
+                                <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
+                        </h3>
+                    </li>
+                        <ul class="list-none pl-0 nav-container__l2 hidden">
+                                <li>
+
+	<a href="/education/past-events/" target="_self" class="" >Past Event Recordings</a>
+                                </li>
+                                <li>
+
+	<a href="/education/upcoming-events/" target="_self" class="" >Upcoming Events, Trainings, and Opportunities</a>
+                                </li>
+                        </ul>
+                    <li>
+                        <h3 class="nav-menu__link">
+
+	<a href="/communications/" target="_self" class="" >Communications</a>
+                                <i class="material-icons toggle-l2 cursor-pointer">arrow_drop_down</i>
+                        </h3>
+                    </li>
+                        <ul class="list-none pl-0 nav-container__l2 hidden">
+                                <li>
+
+	<a href="/communications/blog/" target="_self" class="" >Blog</a>
+                                </li>
+                                <li>
+
+	<a href="/communications/books/" target="_self" class="" >Books</a>
+                                </li>
+                                <li>
+
+	<a href="/communications/newsroom/" target="_self" class="" >Newsroom</a>
+                                </li>
+                                <li>
+
+	<a href="/communications/podcast/" target="_self" class="" >Public Health Review</a>
+                                </li>
+                                <li>
+
+	<a href="https://newscast.astho.org/" target="_blank" class="" >Public Health Review Morning Edition</a>
+                                </li>
+                                <li>
+
+	<a href="/communications/speakers-bureau/" target="_self" class="" >Speakers Bureau</a>
+                                </li>
+                                <li>
+
+	<a href="/communications/newsletters/" target="_self" class="" >Stay Informed</a>
+                                </li>
+                        </ul>
+            </ul>
+        <div class="nav-menu__search-container">
+<form action="/search" method="get">                <div class="flex py-16 px-32">
+                    <input type="text" placeholder="Search" class="nav-menu__search w-full pr-16"
+                           name="q" required>
+                    <button type="submit" class="btn-search">
+                        <i class="material-icons">search</i>
+                    </button>
+                </div>
+</form>        </div>
+    </div>
+</div>
+
+
+
+
+          </nav>
+      </section>
+    
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+                <section class="section-content">
+                    <h1 class="section-title"></h1>
+                    
+<h1>Page not found.</h1>
+<h2>Sorry, we couldn't find that page.</h2>
+<h3>Most Popular Pages</h3>
+<p>You may have been trying to get to one of these pages:</p>
+<ul>
+<li><a title="Our Work (ASTHO)" href="/topic/">Our Work</a></li>
+<li><a title="Careers at ASTHO" href="/about/careers/">Careers at ASTHO</a></li>
+<li><a title="ASTHO Newsroom" href="/communications/newsroom/">Newsroom</a></li>
+<li><a title="ASTHO Leadership Institute" href="/members/ali/">ASTHO Leadership Institute</a></li>
+<li><a title="ASTHO Blog" href="/communications/blog/">ASTHO Blog</a></li>
+<li><a title="Upcoming Events, Trainings, and Opportunities (ASTHO)" href="/education/upcoming-events/">Upcoming Events, Trainings, and Opportunities</a></li>
+<li><a title="Public Health Review (ASTHO)" href="/communications/podcast/">Podcast: Public Health Review</a></li>
+<li><a title="ASTHO Member Directory" href="/members/member-directory/">Member Directory</a></li>
+</ul>
+<h3>Search</h3>
+<p>You may want to try <a title="ASTHO Site Search" href="/search/">search</a> to locate the information you want.</p>
+<h3>Try the Homepage</h3>
+<p>Or you can start from the <a title="ASTHO Homepage" href="/">astho.org homepage</a> to see our latest content.</p>
+
+
+<div class="p-5">
+ 
+</div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+<section>
+    <div class="backToTop">
+        <button class="button">
+            <i class="material-icons">keyboard_arrow_up</i>
+        </button>
+    </div>
+</section>
+<footer class="footer py-16">
+
+	<div class="container pb-8">
+
+		<div>
+
+	<div class="row">
+			<div class="col-lg col-md-6 footer-tab">
+				<h5 class="text-white footer-tab__headline inline-flex items-center">
+
+	<a href="/about/" target="_self" class="text-white" >About Us</a>
+				</h5>
+				 <ul class="list-none pl-0 footer-tab__list">
+							 <li class="pb-2">
+
+	<a href="/about/history/" target="_self" class="text-white" >Our History</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/about/governance/" target="_self" class="text-white" >Leadership and Governance</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/about/partnerships/" target="_self" class="text-white" >Partnerships</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/about/careers/" target="_self" class="text-white" >Careers at ASTHO</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/about/public-health-careers/" target="_self" class="text-white" >Public Health Careers</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/about/strategic-plan/" target="_self" class="text-white" >ASTHO&#x27;s Strategic Plan</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/about/contact/" target="_self" class="text-white" >Contact Us</a>
+							 </li>
+				 </ul>
+			 </div>
+			<div class="col-lg col-md-6 footer-tab">
+				<h5 class="text-white footer-tab__headline inline-flex items-center">
+
+	<a href="/members/" target="_self" class="text-white" >Members</a>
+				</h5>
+				 <ul class="list-none pl-0 footer-tab__list">
+							 <li class="pb-2">
+
+	<a href="/members/member-directory/" target="_self" class="text-white" >ASTHO Member Directory</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/members/opportunities/" target="_self" class="text-white" >Funding &amp; Collaboration Opportunities</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="https://my.astho.org/home" target="_blank" class="text-white" >my.ASTHO</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/members/alumni-society/" target="_self" class="text-white" >Alumni Society</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/members/slrc/" target="_self" class="text-white" >Senior Leader Reserve Corps</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/members/peer-networks/" target="_self" class="text-white" >Peer Networks</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/members/ali/" target="_self" class="text-white" >ASTHO Leadership Institute</a>
+							 </li>
+				 </ul>
+			 </div>
+			<div class="col-lg col-md-6 footer-tab">
+				<h5 class="text-white footer-tab__headline inline-flex items-center">
+
+<span  class="text-white">Our Work</span>
+				</h5>
+				 <ul class="list-none pl-0 footer-tab__list">
+							 <li class="pb-2">
+
+	<a href="/topic/" target="_self" class="text-white" >View All Topics</a>
+							 </li>
+				 </ul>
+			 </div>
+			<div class="col-lg col-md-6 footer-tab">
+				<h5 class="text-white footer-tab__headline inline-flex items-center">
+
+	<a href="/advocacy/" target="_self" class="text-white" >Policy &amp; Advocacy</a>
+				</h5>
+				 <ul class="list-none pl-0 footer-tab__list">
+							 <li class="pb-2">
+
+	<a href="/advocacy/federal-government-affairs/" target="_self" class="text-white" >Federal Government Affairs</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/advocacy/state-health-policy/" target="_self" class="text-white" >State Health Policy</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/advocacy/policy-statements/" target="_self" class="text-white" >Policy Statements</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/advocacy/health-policy-update/" target="_self" class="text-white" >Health Policy Update Series</a>
+							 </li>
+				 </ul>
+			 </div>
+			<div class="col-lg col-md-6 footer-tab">
+				<h5 class="text-white footer-tab__headline inline-flex items-center">
+
+	<a href="/education/" target="_self" class="text-white" >Education &amp; Events</a>
+				</h5>
+				 <ul class="list-none pl-0 footer-tab__list">
+							 <li class="pb-2">
+
+	<a href="/education/past-events/" target="_self" class="text-white" >Past Event Recordings</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/education/upcoming-events/" target="_self" class="text-white" >Upcoming Events, Trainings, and Opportunities</a>
+							 </li>
+				 </ul>
+			 </div>
+			<div class="col-lg col-md-6 footer-tab">
+				<h5 class="text-white footer-tab__headline inline-flex items-center">
+
+	<a href="/communications/" target="_self" class="text-white" >Communications</a>
+				</h5>
+				 <ul class="list-none pl-0 footer-tab__list">
+							 <li class="pb-2">
+
+	<a href="/communications/blog/" target="_self" class="text-white" >Blog</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/communications/books/" target="_self" class="text-white" >Books</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/communications/newsroom/" target="_self" class="text-white" >Newsroom</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/communications/podcast/" target="_self" class="text-white" >Public Health Review</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="https://newscast.astho.org/" target="_blank" class="text-white" >Public Health Review Morning Edition</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/communications/speakers-bureau/" target="_self" class="text-white" >Speakers Bureau</a>
+							 </li>
+							 <li class="pb-2">
+
+	<a href="/communications/newsletters/" target="_self" class="text-white" >Stay Informed</a>
+							 </li>
+				 </ul>
+			 </div>
+	</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="footer-bottom pt-12">
+			<div class="row">
+				<p>
+				<div class="col-lg-2">
+					<div class="pb-8 lg:pb-0 px-2 flex justify-center w-full">
+
+	<a href="/" target="" class="">
+
+
+	<img src="/globalassets/masterpage/footer/astho_footer_logo.png" alt="The ASTHO logo." class="" />
+
+	</a>
+					</div>
+				</div>
+				</p>
+				<div class="col-lg-8">
+					<div>
+
+
+<div class="flex justify-center flex-wrap w-full">
+		<h5 class="text-white px-4">
+
+	<a href="/communications/newsroom/news-releases/" class="text-white" >Newsroom</a>
+		</h5>
+		<h5 class="text-white px-4">
+
+	<a href="/about/careers/" class="text-white" >Careers</a>
+		</h5>
+		<h5 class="text-white px-4">
+
+	<a href="/about/contact/" class="text-white" >Contact Us</a>
+		</h5>
+ </div>
+
+
+					</div>
+
+					<div>
+
+	<div class="flex justify-center pb-4 w-full">
+			<div class="uppercase text-white px-4 text-2xl">
+
+	<a href="/footer/accessibility/" target="" class="text-white" >Accessibility Statement</a>
+			</div>
+				<div class="uppercase text-white px-4 text-2xl">|</div>
+			<div class="uppercase text-white px-4 text-2xl">
+
+	<a href="/footer/copyright/" target="" class="text-white" >Copyright Notice</a>
+			</div>
+				<div class="uppercase text-white px-4 text-2xl">|</div>
+			<div class="uppercase text-white px-4 text-2xl">
+
+	<a href="/footer/privacy/" target="" class="text-white" >Privacy Statement</a>
+			</div>
+
+
+
+	</div>
+					</div>
+
+					<div class="flex justify-center text-white uppercase text-2xl text-center w-full pb-4">© 2025 ASSOCIATION OF STATE AND TERRITORIAL HEALTH OFFICIALS. ALL RIGHTS RESERVED.</div>
+				</div>
+				<p>
+	<div class="col-lg-2">
+		<div class="pl-0 list-none flex justify-center w-full">
+				<li class="mr-4">
+
+	<a href="https://www.youtube.com/c/ASTHO" target="_blank" class="">
+
+
+	<img src="/globalassets/masterpage/footer/social-media-icons/youtube_white.svg" alt="The YouTube Logo." class="ss-icon" />
+
+	</a>
+					</li>
+				<li class="mr-4">
+
+	<a href="https://twitter.com/ASTHO" target="_blank" class="">
+
+
+	<img src="/globalassets/masterpage/footer/social-media-icons/x_white2.svg" alt="Clickable Image - Twitter" class="ss-icon" />
+
+	</a>
+					</li>
+				<li class="mr-4">
+
+	<a href="https://www.linkedin.com/company/association-of-state-and-territorial-health-officials" target="_blank" class="">
+
+
+	<img src="/globalassets/masterpage/footer/social-media-icons/linkedin_white.svg" alt="The LinkedIn logo." class="ss-icon" />
+
+	</a>
+					</li>
+				<li class="mr-4">
+
+	<a href="https://www.facebook.com/StatePublicHealth/" target="_blank" class="">
+
+
+	<img src="/globalassets/masterpage/footer/social-media-icons/facebook_white.svg" alt="The Facebook logo." class="ss-icon" />
+
+	</a>
+					</li>
+		</div>
+	</div>
+
+		
+
+
+
+					</p>
+
+			</div>
+		</div>
+	</div>
+</footer>
+
+  </main>
+	
+</div>
+    <script>
+        !function () { function e() { document.querySelectorAll(".cards-carousel").forEach(e => { tns({ container: e, items: 1, slideBy: "page", loop: false, arrowKeys: !0, controlsText: ["<i class='material-icons prev'>keyboard_arrow_left</i>", "<i class='material-icons next'>keyboard_arrow_right</i>"], navPosition: "bottom" }) }) } "loading" !== document.readyState ? e() : document.addEventListener("DOMContentLoaded", e, !1) }();
+    </script>
+        <div class="comp-video">
+            <div class="comp-video__popup">
+                <div class="comp-video__wrapper">
+                    <button type="button" class="close">
+                        <span>&times;</span>
+                    </button>
+                    <div class="comp-video__container">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_6175884.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+$(document).ready(function(){
+  $(".accordion__header").click(function() {
+    /* target the iframe */
+    var iframeTarget = $(this).siblings('.accordion__tab-content').find(".policyiframe");
+    /* looping through each iframe inside the accordion which has been clicked and reloading the src */
+    jQuery.each($(iframeTarget), function() {
+        $(this).attr({
+            src: $(this).attr("src")
+        });
+    });    
+  });
+});
+</script>
+</html>
